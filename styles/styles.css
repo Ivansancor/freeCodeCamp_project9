@@ -2,11 +2,6 @@
     --main: rgb(38, 13, 70);
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
-
 * {
     box-sizing: border-box;
 }
@@ -35,10 +30,11 @@ header {
 header h1 {
     color: yellowgreen;
     width: 33%;
+    font-size: min(3.5vw, 2rem)
 }
 
 header p {
-    font-size: 1.5rem;
+    font-size: min(3vw, 1.5rem);
     font-weight: 600;
     width: 33%;
 }
@@ -56,6 +52,11 @@ header nav {
 header nav a {
     color: white;
     text-decoration: none;
+}
+
+header nav a:hover {
+    color: yellowgreen;
+    cursor: pointer;
 }
 
 main {
@@ -162,6 +163,7 @@ input[type="submit"]:hover {
     transform: scale(0.95);
     transition: all 0.2s;
     border: 0.2rem solid var(--main);
+    cursor: pointer;
 }
 
 footer {
@@ -179,10 +181,30 @@ footer address p {
     margin: 0.2rem;
 }
 
-footer > a {
+footer a {
     color: white;
 }
 
-footer > a:hover {
+footer a:hover {
     color: yellowgreen;
+}
+
+
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+@media (prefers-reduced-motion:no-preference) {
+    html {
+    scroll-behavior: smooth;
+    }
 }

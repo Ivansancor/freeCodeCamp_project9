@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="An accessible quiz built with HTML and CSS">
     <title>Accesible Quiz</title>
     <link rel="stylesheet" href="styles/styles.css">
 </head>
@@ -11,45 +12,45 @@
         <p>freeCodeCamp</p>
         <h1>HTML/CSS Quiz</h1>
         <nav>
-            <a href="#info">INFO</a>
-            <a href="#html">HTML</a>
-            <a href="#css">CSS</a>
+            <a href="#info" accesskey="i">INFO</a>
+            <a href="#html" accesskey="h">HTML</a>
+            <a href="#css" accesskey="c">CSS</a>
         </nav>
     </header>
     <main>
         <form action="" method="post">
-            <section id="info">
+            <section id="info" role="region" aria-labelledby="student-info">
                 <div class="landing-filler"></div>
-                <h2>Student Info</h2>
+                <h2 id="student-info">Student Info</h2>
                     <article>
                         <label for="name">Name: </label><input type="text" name="name" id="name" required><br>
                         <label for="email">Email: </label><input type="email" name="email" id="email" required><br>
-                        <label for="date">D.O.B.: </label><input type="date" name="date" id="date" required><br>
+                        <label for="date">D.O.B.: <span class="sr-only">(Date of Birth)</span> </label><input type="date" name="date" id="date" required><br>
                     </article>
             </section>
-            <section id="html">
+            <section id="html" role="region" aria-labelledby="html-questions">
                 <div class="landing-filler"></div>
-                <h2>HTML</h2>
+                <h2 id="html-questions">HTML</h2>
                 <article>
                     <h3>Question #1</h3>
                     <fieldset>
                         <legend>The legend element represents a caption for the content of its parent fieldset element</legend>
-                        <label for="true"><input type="radio" name="true-false" id="true">True</label>
-                        <label for="false"><input type="radio" name="true-false" id="false">False</label>
+                        <label for="true"><input type="radio" name="true-false1" id="true" value="true">True</label>
+                        <label for="false"><input type="radio" name="true-false1" id="false" value="false">False</label>
                     </fieldset>
                 </article>
                 <article>
                     <h3>Question #2</h3>
                     <fieldset>
                         <legend>A label element nesting an input element is required to have a for attribute with the same value as the input's id</legend>
-                        <label for="true"><input type="radio" name="true-false" id="true">True</label>
-                        <label for="false"><input type="radio" name="true-false" id="false">False</label>
+                        <label for="true"><input type="radio" name="true-false2" id="true" value="true">True</label>
+                        <label for="false"><input type="radio" name="true-false2" id="false" value="false">False</label>
                     </fieldset>
                 </article>
             </section>
-            <section id="css">
+            <section id="css" role="region" aria-labelledby="css-questions">
                 <div class="landing-filler"></div>
-                <h2>CSS</h2>
+                <h2 id="css-questions">CSS</h2>
                 <article>
                     <label for="select">Can the CSS margin property accept negative values?</label>
                     <select name="select" id="select" required>
@@ -58,15 +59,15 @@
                         <option value="no">No</option>
                     </select>
                     <label for="textarea">Do you have any questions?</label>
-                    <textarea name="textarea" id="textarea" placeholder="Who is flexbox..."></textarea>
+                    <textarea name="textarea" id="textarea" placeholder="Who is flexbox..." rows="12" cols="10"></textarea>
                 </article>
             </section>
             <input type="submit" value="Send">
         </form>
     </main>
     <footer>
-        <a href="https://freecodecamp.org">freeCodeCamp</a>
         <address>
+            <a href="https://freecodecamp.org">freeCodeCamp</a>
             <p>San Francisco</p>
             <p>California</p>
             <p>USA</p>
