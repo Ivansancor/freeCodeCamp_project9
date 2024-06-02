@@ -1,0 +1,180 @@
+:root {
+    --main: rgb(38, 13, 70);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #e7e7e7;
+}
+
+header {
+    width: 100%;
+    height: 5rem;
+    padding: 2rem;
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    color: white;
+    background-color: var(--main);
+}
+
+header h1 {
+    color: yellowgreen;
+    width: 33%;
+}
+
+header p {
+    font-size: 1.5rem;
+    font-weight: 600;
+    width: 33%;
+}
+
+header h2, header h1, main h2 {
+    font-family: monospace;
+}
+
+header nav {
+    width: 33%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    width: 70%;
+    margin: 3rem auto;
+}
+
+main h2 {
+    border-bottom: 0.3rem solid rgba(137, 137, 137, 0.5);
+    letter-spacing: 0.1rem;
+    font-size: 2rem;
+    color: var(--main);
+    padding-bottom: 0.2rem;
+    margin-bottom: 3rem;
+}
+
+main section {
+    margin-bottom: 3rem;
+}
+
+#info label {
+    display: inline-block;
+    width: 3rem;
+    text-align: right;
+}
+
+#info input {
+    margin: 0 0 2rem 0.5rem;
+    border: none;
+    height: 2rem;
+    width: 50%;
+    font-size: 1rem;
+}
+
+main section article {
+    margin-left: 1rem;
+}
+
+#html h3 {
+    font-size: 1.2rem;
+}
+
+#html fieldset {
+    border: none;
+}
+
+#html fieldset legend {
+    margin-bottom: 2rem;
+}
+
+#html label {
+    display: block;
+}
+
+#html article:first-of-type {
+    margin-bottom: 2rem;
+}
+
+#html input[type="radio"]:first-of-type {
+    margin-bottom: 1rem;
+}
+
+#css select, #css textarea {
+    display: block;
+    border: none;
+    font-size: 1rem;
+    width: 50%;
+    margin-top: 1rem;
+    margin-left: 1rem;
+}
+
+#css select {
+    height: 2rem;
+    margin-bottom: 3rem;
+}
+
+#css textarea {
+    height: 5rem;
+    resize: none;
+}
+
+input[type="submit"] {
+    display: block;
+    font-size: 1.5rem;
+    width: 20rem;
+    height: 4rem;
+    margin: 0 auto;
+    color: white;
+    background-color: var(--main);
+    border: none;
+}
+
+input[type="submit"]:hover {
+    background-color: yellowgreen;
+    color: var(--main);
+    box-shadow: inset 0 0 0.1rem 0.1rem var(--main);
+    transform: scale(0.95);
+    transition: all 0.2s;
+    border: 0.2rem solid var(--main);
+}
+
+footer {
+    margin: 0;
+    padding: 1rem;
+    width: 100%;
+    text-align: center;
+    font-style: italic;
+    color: white;
+    background-color: var(--main);
+}
+
+footer address p {
+    margin: 0.2rem;
+}
+
+footer > a {
+    color: white;
+}
+
+footer > a:hover {
+    color: yellowgreen;
+}
